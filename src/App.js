@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useContext,useState,useEffect } from "react";
+import React, { lazy, Suspense, useContext, useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -10,17 +10,18 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import UserContext from "./utils/UserContext";
 import appStore from "./utils/appStore";
 import { Provider } from "react-redux";
+import Cart from "./components/Cart";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const App = () => {
-  const [userName,setUserName] = useState("Akilan");
-  
+  const [userName, setUserName] = useState("Akilan");
+
   return (
     //Provider uses the key store predefinedly,So we just pass our store into it as a props.We need to wrap our app inside Provider so that our app gets access to the store.
     <Provider store={appStore}>
       <div className="app">
-          <Header />
+        <Header />
         <Outlet />
       </div>
     </Provider>
@@ -52,6 +53,10 @@ const appRouter = createBrowserRouter([
             <Grocery />
           </Suspense>
         ),
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/restaurants/:resId",
