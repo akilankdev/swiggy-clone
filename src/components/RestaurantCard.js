@@ -1,9 +1,6 @@
 import { CDN_URL } from "../utils/constants";
-import { useContext } from "react";
-import UserContext from "../utils/UserContext";
 
 const RestaurantCard = (props) => {
-  const user = useContext(UserContext);
   const { resData } = props;
   const {
     name,
@@ -29,7 +26,6 @@ const RestaurantCard = (props) => {
       <h4>{avgRating} stars</h4>
       <h4>{costForTwo}</h4>
       <h4>{sla.slaString}</h4>
-      <h4 className="font-bold text-xl">{user.loggedInUser}</h4>
     </div>
   );
 };

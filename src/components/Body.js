@@ -3,14 +3,9 @@ import useRestaurantList from "../utils/useRestaurantList";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import Shimmer from "./Shimmer";
-import { useState, useEffect,useContext } from "react";
-import UserContext from "../utils/UserContext.js";
-
+import { useState, useEffect } from "react";
 
 const Body = () => {
-
-  //Destructuring the context's data
-  const {loggedInUser,setUserName} = useContext(UserContext);
   
   //custom hook to fetch API data
   const listOfRestaurants = useRestaurantList();
@@ -83,13 +78,6 @@ const Body = () => {
         >
           Reset filters
         </button>
-        <div>
-          <label>User Name :</label>
-          <input className="p-1 border border-black"
-            value={loggedInUser}
-            onChange={(e) => setUserName(e.target.value)}
-          ></input>
-        </div>
       </div>
       {/* use square parentheses to hardcode specific values */}
       <div className="res-container flex flex-wrap ">

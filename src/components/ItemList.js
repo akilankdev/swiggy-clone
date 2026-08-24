@@ -1,16 +1,14 @@
 import { CDN_URL } from "../utils/constants.js";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice.js";
-import { use } from "react";
 
 const ItemList = ({ items }) => {
 
   //We need useDispatch() to dispatch an action.
   const dispatch = useDispatch();
-  const handleAddItem = ()=> {
-    //We pass the action inside dispatch().Inside that action,whatever we pass,it will be pushed/inserted into the state items[] using the reducer().
-    //dispatch() will return an object and it is passed to the reducer fn()."Biryani" is the 'action.payload' which we use in reducer fn().
-    dispatch(addItem("Biryani"));
+  const handleAddItem = (item)=> {
+    //Adding the specific menu item's info into the array when the btn is clicked
+    dispatch(addItem(item));
   }
 
   return (
@@ -29,7 +27,7 @@ const ItemList = ({ items }) => {
               <p className="text-xs text-gray-600">{item.card.info.description}</p>
             </div>
             <div>
-              <button className="absolute bg-black text-sm text-white ml-11 mt-10 rounded-sm p-0.5 cursor-pointer" onClick={handleAddItem}>Add +</button>
+              <button className="absolute bg-black text-sm text-white ml-11 mt-10 rounded-sm p-0.5 cursor-pointer" onClick={() => handleAddItem(item)}>Add +</button>
               <img src={CDN_URL + item.card.info.imageId} className="w-24 "></img>
             </div>
             
