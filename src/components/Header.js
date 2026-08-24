@@ -9,8 +9,6 @@ const Header = () => {
 
   const cartItems = useSelector((store) => store.cart.items);
 
-  console.log(cartItems);
-
   return (
     <div className="header flex items-center justify-between bg-pink-100 mb-2 shadow-lg">
       <div className="logo-container">
