@@ -9,7 +9,7 @@ const Cart = () => {
   };
 
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
+ 
   return (
     <div className="text-center">
       <h1 className="p-4 m-4 text-xl font-bold">Cart</h1>

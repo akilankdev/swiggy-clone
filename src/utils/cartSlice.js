@@ -16,7 +16,8 @@ const cartSlice = createSlice({
     },
     clearCart: (state) => {
       //resets the cart to 0 again.We cant do 'state.items = []',theres a reason behind it.
-      state.items.length = 0;
+      state.items = [];
+      // return { items: [] };
     }
   }
 });
