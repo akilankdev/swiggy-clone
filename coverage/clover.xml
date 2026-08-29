@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1787897563824" clover="3.2.0">
-  <project timestamp="1787897563824" name="All files">
-    <metrics statements="33" coveredstatements="27" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="9" elements="52" coveredelements="38" complexity="0" loc="33" ncloc="33" packages="2" files="7" classes="7"/>
+<coverage generated="1787983921414" clover="3.2.0">
+  <project timestamp="1787983921415" name="All files">
+    <metrics statements="68" coveredstatements="53" conditionals="10" coveredconditionals="7" methods="29" coveredmethods="17" elements="107" coveredelements="77" complexity="0" loc="68" ncloc="68" packages="2" files="10" classes="10"/>
     <package name="components">
-      <metrics statements="15" coveredstatements="14" conditionals="4" coveredconditionals="2" methods="8" coveredmethods="7"/>
+      <metrics statements="39" coveredstatements="29" conditionals="10" coveredconditionals="7" methods="18" coveredmethods="11"/>
+      <file name="Body.js" path="C:\Users\inshg\OneDrive\Desktop\namaste-react\src\components\Body.js">
+        <metrics statements="22" coveredstatements="13" conditionals="6" coveredconditionals="5" methods="9" coveredmethods="3"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="21" count="4" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="4" type="stmt"/>
+        <line num="26" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="31" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="85" count="9" type="stmt"/>
+      </file>
       <file name="Contact.js" path="C:\Users\inshg\OneDrive\Desktop\namaste-react\src\components\Contact.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -19,18 +44,23 @@
       </file>
       <file name="RestaurantCard.js" path="C:\Users\inshg\OneDrive\Desktop\namaste-react\src\components\RestaurantCard.js">
         <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
         <line num="22" count="0" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+      </file>
+      <file name="Shimmer.js" path="C:\Users\inshg\OneDrive\Desktop\namaste-react\src\components\Shimmer.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
       </file>
     </package>
     <package name="utils">
-      <metrics statements="18" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
+      <metrics statements="29" coveredstatements="24" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="6"/>
       <file name="appStore.js" path="C:\Users\inshg\OneDrive\Desktop\namaste-react\src\utils\appStore.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="5" count="1" type="stmt"/>
@@ -45,21 +75,35 @@
       </file>
       <file name="constants.js" path="C:\Users\inshg\OneDrive\Desktop\namaste-react\src\utils\constants.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
       </file>
       <file name="useOnlineStatus.js" path="C:\Users\inshg\OneDrive\Desktop\namaste-react\src\utils\useOnlineStatus.js">
         <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+      </file>
+      <file name="useRestaurantList.js" path="C:\Users\inshg\OneDrive\Desktop\namaste-react\src\utils\useRestaurantList.js">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="8" count="4" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="22" count="9" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
       </file>
     </package>
   </project>
