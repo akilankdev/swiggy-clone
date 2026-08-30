@@ -13,7 +13,7 @@ global.fetch = jest.fn(() => {
   });
 });
 
-it("should render Body component with search button", async () => {
+it("should render 9 cards and after searching 'slice', render two cards", async () => {
   await act(async () =>
     render(
       <MemoryRouter>
@@ -21,6 +21,10 @@ it("should render Body component with search button", async () => {
       </MemoryRouter>,
     ),
   );
+
+  //testing whether 9 restaurants cards are rendered before search.
+  const cardBeforeSearch = screen.getAllByTestId("resCard");
+  expect(cardBeforeSearch.length).toBe(9);
 
   const searchInput = screen.getByTestId("searchBar");
   //This will trigger the onChange in the <input> element.
@@ -32,7 +36,7 @@ it("should render Body component with search button", async () => {
   fireEvent.click(searchButton);
 
   //Checking whether "spice" input renders 2 Restaurant cards.
-  const resList = screen.getAllByTestId("resCard");
-  expect(resList.length).toBe(2);
+  const cardAfterSearch = screen.getAllByTestId("resCard");
+  expect(cardAfterSearch.length).toBe(2);
   //test will pass
 });
