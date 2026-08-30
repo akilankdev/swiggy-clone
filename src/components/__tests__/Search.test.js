@@ -1,5 +1,6 @@
 import Body from "../Body";
-import { render } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import MOCK_DATA from "../mocks/resListMock.json";
 import { act } from "react";
 import { MemoryRouter } from "react-router-dom";
@@ -20,4 +21,18 @@ it("should render Body component with search button", async () => {
       </MemoryRouter>,
     ),
   );
+
+  const searchInput = screen.getByTestId("searchBar");
+  //This will trigger the onChange in the <input> element.
+  fireEvent.change(searchInput, { target: { value: "spice" } });
+
+  // expect(searchInput).toHaveValue("spice");/
+  //Clicking the search button
+  const searchButton = screen.getByRole("button",{name:"Search"});
+  fireEvent.click(searchButton);
+
+  //Checking whether "spice" input renders 2 Restaurant cards.
+  const resList = screen.getAllByTestId("resCard");
+  expect(resList.length).toBe(2);
+  //test will pass
 });

@@ -13,7 +13,7 @@ const RestaurantCard = (props) => {
     cloudinaryImageId,
   } = resData?.info; //Optional Chaining.
   return (
-    <div className="res-card  w-50 m-4 p-4 bg-gray-100 hover:bg-gray-200 rounded">
+    <div className="res-card  w-50 m-4 p-4 bg-gray-100 hover:bg-gray-200 rounded" data-testid="resCard">
       <img
         className="res-logo rounded"
         src={CDN_URL + cloudinaryImageId}

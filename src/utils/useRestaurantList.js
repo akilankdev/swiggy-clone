@@ -10,7 +10,7 @@ const useRestaurantList = () => {
   }, []);
 
   const fetchData = async () => {
-   // try {
+   try {
       const data = await fetch(RESTAURANT_LIST_API);
       const json = await data.json();
 
@@ -28,10 +28,10 @@ const useRestaurantList = () => {
       }));
 
       setListOfRestaurants(updatedRestaurants);
-    //} 
-    /* catch (err) {
-      console.log("ERROR :", err);
-    } */
+    } 
+    catch (err) {
+      console.error("ERROR :", err);
+    }
   };
   return listOfRestaurants;
 };
