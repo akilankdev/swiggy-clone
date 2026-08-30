@@ -1,21 +1,9 @@
 import { render, screen } from "@testing-library/react";
 import Contact from "../Contact";
-import { toBeInTheDocument } from "@testing-library/jest-dom";
+import "@testing-library/jest-dom";
 
 describe("Contact us test cases", () => {
-  beforeAll(() => {
-    console.log("Before all");
-  });
-  beforeEach(() => {
-    console.log("Before each");
-  });
-  afterAll(() => {
-    console.log("After all");
-  });
-  afterEach(() => {
-    console.log("After each");
-  });
-  
+
   it("Should render contact component into DOM", () => {
     render(<Contact />);
     const heading = screen.getByRole("heading");

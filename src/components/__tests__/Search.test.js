@@ -14,13 +14,13 @@ global.fetch = jest.fn(() => {
 });
 
 it("should render 9 cards and after searching 'slice', render two cards", async () => {
-  await act(async () =>
-    render(
+  await act(async () => {
+    return render(
       <MemoryRouter>
         <Body />
       </MemoryRouter>,
-    ),
-  );
+    )
+  });
 
   //testing whether 9 restaurants cards are rendered before search.
   const cardBeforeSearch = screen.getAllByTestId("resCard");
