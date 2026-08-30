@@ -40,3 +40,23 @@ it("should render 9 cards and after searching 'slice', render two cards", async 
   expect(cardAfterSearch.length).toBe(2);
   //test will pass
 });
+it("should filter Top rated restaurants",async ()=> {
+  await act(async() => 
+    render(
+      <MemoryRouter>
+        <Body />
+      </MemoryRouter>
+    )
+  );
+  //Whether every card is rendered
+  const cardsBeforeFilter = screen.getAllByTestId("resCard");
+  expect(cardsBeforeFilter.length).toBe(9)
+
+  //Click the button
+  const topRatedButton = screen.getByRole("button",{name: "Top-rated Restaurant"});
+  fireEvent.click(topRatedButton);
+
+  //Filters top rated
+  const cardsAfterFilter = screen.getAllByTestId("resCard");
+  expect(cardsAfterFilter.length).toBe(5)
+});
