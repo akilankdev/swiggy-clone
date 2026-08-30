@@ -2,10 +2,20 @@ import { render, screen } from "@testing-library/react";
 import Contact from "../Contact";
 import { toBeInTheDocument } from "@testing-library/jest-dom";
 
-//describe() is used to group test cases.
-
 describe("Contact us test cases", () => {
-  //We can also use 'it' keyword instead of 'test',both are the same and works the same.
+  beforeAll(() => {
+    console.log("Before all");
+  });
+  beforeEach(() => {
+    console.log("Before each");
+  });
+  afterAll(() => {
+    console.log("After all");
+  });
+  afterEach(() => {
+    console.log("After each");
+  });
+  
   it("Should render contact component into DOM", () => {
     render(<Contact />);
     const heading = screen.getByRole("heading");
