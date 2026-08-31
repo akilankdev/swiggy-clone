@@ -66,7 +66,9 @@ it("should add items to cart and update the Header cart count", async () => {
   //Clicks the 2nd add button
   fireEvent.click(addBtns[1]);
   expect(screen.getByText("Cart - 2 items")).toBeInTheDocument();
-  expect(addBtns.length).toBe(5);
-  expect(screen.getByText("Clear Cart")).toBeInTheDocument();
 
+  //Checking if Cart page is rendered
+  expect(screen.getByText("Clear Cart")).toBeInTheDocument();
+  //<ItemList> is used to display food items in both Menu and Cart page.SO now combining them both should give me 5 food items in total.Thats what we are checking here.
+  expect(screen.getAllByTestId("foodItem").length).toBe(5);
 });
