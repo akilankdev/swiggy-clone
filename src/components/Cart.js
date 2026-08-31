@@ -21,7 +21,7 @@ const Cart = () => {
       </button>
       {cartItems.length === 0 && (<h2 className="m-3">The Cart is empty.Add items to the cart.</h2 >)}
       <div className="w-6/12 m-auto">
-        <ItemList items={cartItems} />
+        <ItemList items={cartItems} showAddButton={false}/>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Header from "../Header.js";
 import RestaurantMenu from "../RestaurantMenu";
+import Cart from "../Cart.js";
 import MOCK_MENU_DATA from "../mocks/resMenuMock.json";
 import { act } from "react";
 import "@testing-library/jest-dom";
@@ -42,7 +43,7 @@ it("should expand accordion when accordion header is clicked", async () => {
   expect(screen.getAllByTestId("foodItem").length).toBe(3);
 });
 
-it("should update Header text Cart - 0 items when Add+ button is clicked", async () => {
+it("should add items to cart and update the Header cart count", async () => {
   await act(async () =>
     render(
       <Provider store={appStore}>
@@ -50,6 +51,7 @@ it("should update Header text Cart - 0 items when Add+ button is clicked", async
           <Header />
         </MemoryRouter>
         <RestaurantMenu />
+        <Cart />
       </Provider>,
     ),
   );
@@ -64,4 +66,7 @@ it("should update Header text Cart - 0 items when Add+ button is clicked", async
   //Clicks the 2nd add button
   fireEvent.click(addBtns[1]);
   expect(screen.getByText("Cart - 2 items")).toBeInTheDocument();
+  expect(addBtns.length).toBe(5);
+  expect(screen.getByText("Clear Cart")).toBeInTheDocument();
+
 });

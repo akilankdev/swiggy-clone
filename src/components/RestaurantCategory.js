@@ -20,7 +20,7 @@ const RestaurantCategory = ({ data,showItems,setShowItems,index,showIndex }) => 
           <span>🔽</span>
         </div>
       
-        { showItems && <ItemList items={data.itemCards} />}
+        { showItems && <ItemList items={data.itemCards} showAddButton={true}/>}
       </div>
     </div>
   );
