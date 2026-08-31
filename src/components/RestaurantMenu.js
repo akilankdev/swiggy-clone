@@ -4,7 +4,6 @@ import RestaurantCategory from "./RestaurantCategory";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 import { useState } from "react";
 
-
 const RestaurantMenu = () => {
 
   //hold the index of the component whose accordion header is clicked by the user.
